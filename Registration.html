@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EVENT REGISTRATION FORM</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+        form {
+            background: white;
+            padding: 20px 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-sizing: border-box; /* Ensures padding doesn't break the 100% width */
+        }
+        button {
+            background: #4cAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+        }
+        button:hover {
+            background: #457049;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="POST">
+        <h2>event registration</h2><br>
+        
+        <label for="name">full name</label><br>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email Address</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="phone">Phone Number</label><br>
+        <input type="tel" id="phone" name="phone" required><br>
+        
+        <!-- Added Gender Field -->
+        <label for="gender">Gender</label><br>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            <option value="prefer_not_to_say">Prefer not to say</option>
+        </select>
+        
+        <label for="event">Choose Event</label><br>
+        <select id="event" name="event">
+            <option value="coding">Coding Contest</option>
+            <option value="debate">debate</option>
+            <option value="music">music show</option>
+        </select>
+        
+        <button type="submit">register</button>
+    </form>
+</body>
+</html>
+
